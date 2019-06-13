@@ -498,6 +498,7 @@ namespace SharpMap.Data.Providers
                 {
                     conn.Open();
                     var dtr = command.ExecuteReader();
+                    dtr.Read();
                     if (dtr["numrecs"] != null)
                     {
                         count = Convert.ToInt32(dtr["numrecs"]); // (int)command.ExecuteScalar();
